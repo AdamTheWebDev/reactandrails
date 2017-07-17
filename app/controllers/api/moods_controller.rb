@@ -35,11 +35,6 @@ module Api
   def set_mood
      @mood = Mood.find(params[:id])
    end
-   def sort_by
-      %w(input_url
-         status
-         output
-         ).include?(params[:sort_by]) ? params[:sort_by] : 'input_url'
-    end
+  
 
 end
