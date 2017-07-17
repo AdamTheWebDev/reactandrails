@@ -1,5 +1,10 @@
 var MoodTable = React.createClass({
   render: function() {
+    var moods = [];
+    this.props.moods.forEach(function(mood) {
+    moods.push(<Mood mood={mood} key={'mood' + mood.id}/>);
+ }.bind(this));
+
     return(
       <table className="table table-striped">
         <thead>
@@ -7,10 +12,10 @@ var MoodTable = React.createClass({
             <th className="col-md-3">Input</th>
             <th className="col-md-2">status</th>
             <th className="col-md-3">output</th>
-            
+
           </tr>
         </thead>
-        <tbody></tbody>
+        <tbody>{moods}</tbody>
       </table>
     )
   }
