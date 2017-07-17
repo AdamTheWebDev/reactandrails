@@ -1,15 +1,15 @@
 var Mood = React.createClass({
   propTypes: {
-    input: React.PropTypes.text,
+    input_url: React.PropTypes.string,
     status: React.PropTypes.string,
-    output: React.PropTypes.text,
+    output: React.PropTypes.string,
 
   },
   render: function() {
     var mood = this.props.mood;
     return(
       <tr>
-        <td>{mood.input}</td>
+        <td>{mood.input_url}</td>
         <td>{mood.status}</td>
         <td>{mood.output}</td>
 

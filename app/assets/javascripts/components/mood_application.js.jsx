@@ -17,6 +17,14 @@ var MoodApplication = React.createClass({
       }
     });
   },
+  handleSearch: function(moods) {
+    this.setState({ moods: moods });
+  },
+  handleAdd: function(mood) {
+    var moods = this.state.moods;
+    moods.push(mood);
+    this.setState({ moods: moods });
+  },
 
 
   render: function() {
@@ -26,6 +34,14 @@ var MoodApplication = React.createClass({
           <h1>Mood Music</h1>
           <p>Adam Roberts</p>
         </div>
+        <div className="row">
+       <div className="col-md-4">
+         <SearchForm handleSearch={this.handleSearch} />
+       </div>
+       <div className="col-md-8">
+          <NewForm handleAdd={this.handleAdd} />
+        </div>
+     </div>
         <div className="row">
           <div className="col-md-12">
             <MoodTable moods={this.state.moods}/>

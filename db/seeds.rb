@@ -5,4 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-10.times {Mood.create!(input: "This url input", status: "Process, skip, complete", output: "this is url output")}
+10.times do |i|
+   Mood.create!(input_url: "This url input_url #{i}",
+                status: "Process, skip, complete #{i}",
+                output: "this is url output")}
+end

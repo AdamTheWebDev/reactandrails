@@ -9,7 +9,7 @@ var MoodTable = React.createClass({
       <table className="table table-striped">
         <thead>
           <tr>
-            <th className="col-md-3">Input</th>
+            <th className="col-md-3">input_url</th>
             <th className="col-md-2">status</th>
             <th className="col-md-3">output</th>
 
